@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Orders</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+  </head>
+  <body>
+
+       <!-- MAIN CONTENT -->
+
+    <div id="users" class="col col-lg-3 col-md-4 col-sm-5 col-xs-auto">
+        <div class="panel">
+            <div class="panel-heading"><h2>Clients</h2></div>
+            <div class="panel-body">
+              <ul id="list">
+                
+              </ul> 
+              <div class="btn button" onClick="addAnother()"> Add Element </div>
+            </div>
+          <div class="panel-footer">
+          </div>
+        </div>
+    </div>  
+
+    <div id="orders" class="display"> 
+        <div class="panel">
+            <div class="panel-heading">
+                <h2>Order</h2>
+                <span class="glyphicon glyphicon-remove" onClick="closeOrder()"></span>
+            </div>
+            <div class="panel-body">
+                <h4>Order number</h4>
+                <p>Curabitur faucibus scelerisque tellus, eget porttitor nulla rutrum sit amet. Aenean vel magna a eros finibus malesuada vulputate et lectus. Praesent vel mi suscipit lectus aliquam tempus quis tristique lectus. Integer tristique, diam id tempor posuere, quam est lobortis lacus, sit amet maximus ipsum lacus vitae ex. Phasellus nisl metus, dignissim nec lacus congue, euismod molestie dui.</p>
+            <div class="panel-footer" id="options">
+                <button type="button" id="acceptButton" class="btn">Accept</button>
+                <button type="button" id="cancelButton" class="btn">Cancel order</button>
+                <button id="new1" class="display">Cancel</button>
+                <button type="button" id="new2" class="display" class="btn">Cancel reason</button>
+                <button type="button" id="new3" class="display" class="btn">Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="jquery-3.2.1.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+    addAnother = function() {
+      var ul = document.getElementById("list");
+      var li = document.createElement("li");
+      var children = ul.children.length + 1
+      li.setAttribute("class", "user")
+      var button = document.createElement("button");
+      button.innerHTML = children + " first_name "+"last_name" ;
+      li.appendChild(button);
+      ul.appendChild(li);
+      li.addEventListener('click', function(){ openOrder();}, false);
+    }
+
+    openOrder = function(){
+        openBox();
+        changeOpacity();
+    }
+
+    openBox = function(){
+      var element = document.getElementById("orders");
+      element.classList.remove("display");
+     }
+
+    changeOpacity = function(){
+      var element = document.getElementById("users");
+      element.classList.add("opacity");
+    }
+
+    closeOrder = function(){
+       closeBox();
+       removeOpacity();
+    }
+
+    closeBox = function(){
+      var element = document.getElementById("orders");
+      element.classList.add("display");
+    }
+
+    removeOpacity = function(){
+      var element = document.getElementById("users");
+      element.classList.remove("opacity");
+    }
+
+    $("#cancelButton").click(function(){
+        $("#acceptButton").addClass("display");
+        $("#cancelButton").addClass("display");
+        $("#new1").removeClass("display");
+        $("#new2").removeClass("display");
+    });
+
+    $("#acceptButton").click(function(){
+        $("#acceptButton").addClass("display");
+        $("#cancelButton").addClass("display");
+        $("#new3").removeClass("display");  
+    });
+
+    $("#new1, #new2").click(function(){
+      $("#list>li>button").addClass("red");
+    });
+
+    $("#new3").click(function(){
+      $("#list>li>button").addClass("green");
+    });
+
+    $("#new1, #new2, #new3").click(function(){
+      closeOrder();
+        
+    });
+   
+  </script>
+
+  </body>
+</html>

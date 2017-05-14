@@ -1,0 +1,123 @@
+body{
+  margin: 0;
+  background-color: #f2f2f2;
+  font-family: 'Droid Serif', serif;
+}
+
+
+.panel-heading{
+  background-color: #ff751a;
+}
+
+.panel{
+  border: 1px solid silver;
+}
+
+#users .panel-footer{
+  height: 5%;
+  background-color: #ff751a;
+ 
+}
+
+panel-footer>.button {
+    width: 100px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+
+#users{
+margin-left: 0 auto;
+left: 0 auto;
+}
+
+#users, #orders{
+height: 100%;
+padding: 2%;
+}
+
+ul {
+  list-style-type:none;
+}
+
+ul li{
+margin-bottom: 2%;
+}
+
+#list>li>button{
+  border: none;
+  padding: 2% 3%;
+}
+
+.display{
+  display: none;
+}
+
+.panel-footer{
+  background-color: white;
+}
+
+.opacity{
+  opacity: 0.4;
+}
+
+.glyphicon{
+    float: right;
+    padding-top: 1%;
+}
+
+.glyphicon:hover{
+   color: silver;
+}
+
+h2,.glyphicon{
+  display: inline;
+}
+
+#options>button{
+  float: right;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding:2%;
+  background-color: #ff6600;
+  color: white;
+}
+
+#options>button:hover{
+  background-color: #803300;
+}
+
+.red{
+  background-color: #ff6666;
+}
+
+.green{
+  background-color: #33cc33;
+
+}
+
+@media (min-width: 760px){ 
+    #orders{
+      width: 55%;
+      height: auto;
+       z-index: 1;
+      position: absolute;
+      top:40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 760px){ 
+    #orders{
+      
+       z-index: 1;
+      position: absolute;
+      top:10%;  
+    }
+}
+
