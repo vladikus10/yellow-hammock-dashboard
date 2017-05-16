@@ -1,123 +1,106 @@
 body{
   margin: 0;
   background-color: #f2f2f2;
-  font-family: 'Droid Serif', serif;
+  color: #19181C;
+  padding: 0;
+  
 }
 
-
-.panel-heading{
-  background-color: #ff751a;
-}
-
-.panel{
-  border: 1px solid silver;
-}
-
-#users .panel-footer{
-  height: 5%;
-  background-color: #ff751a;
- 
-}
-
-panel-footer>.button {
-    width: 100px;
-    height: 25px;
-    color: white;
-    text-align: center;
-    line-height: 25px;
-}
-
-#users{
-margin-left: 0 auto;
-left: 0 auto;
-}
-
-#users, #orders{
-height: 100%;
-padding: 2%;
-}
-
-ul {
-  list-style-type:none;
-}
-
-ul li{
-margin-bottom: 2%;
-}
-
-#list>li>button{
-  border: none;
-  padding: 2% 3%;
-}
-
-.display{
-  display: none;
-}
-
-.panel-footer{
+#pageone{
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0;
+  border: 2px solid black;
+  border-radius: 2px;
   background-color: white;
+  font-size: 14px;
 }
 
-.opacity{
-  opacity: 0.4;
+.heading{
+  background-color: white;
+  border-bottom: 2px solid silver;
+  text-align: center;
+  padding: 3%;
 }
 
-.glyphicon{
-    float: right;
-    padding-top: 1%;
+.title{
+  font-size: 20px;
 }
 
-.glyphicon:hover{
-   color: silver;
+.close{
+  color: #4169E1;
+  font-size: 25px;
+  padding-right: 0;
+  text-align: right;
 }
 
-h2,.glyphicon{
-  display: inline;
+.panel-body{
+background-color: white;
 }
 
-#options>button{
-  float: right;
-  margin-left: 5%;
+.line1{
+  border-bottom: 1px solid silver;
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.line1>.swipe{
+  color: #9ACDFF;
+  text-align: right;
+  padding-right: 0;
+}
+
+.line1>.orders{
+    padding-left: 0;
+}
+
+.row{
+  margin:0;
+}
+
+.all_clients{
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+  height: 3%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3%;
+  border-bottom: 1px solid silver;
+}
+
+.all_clients>.col{
+  padding-left: 0;
+}
+
+.image>img{
+  height: 30px;
+  width: 30px;
+  }
+
+.order{
+  vertical-align: middle; 
+  text-align: left; 
+}
+
+.menu{
+  display:none;
+  padding: 1%;
+  font-size: 25px;
   margin-top: 2%;
-  margin-bottom: 2%;
-  border: 1px solid grey;
+  margin-left: 86%;
+  position: fixed;
+  border: 1px solid silver;
   border-radius: 5px;
-  padding:2%;
-  background-color: #ff6600;
-  color: white;
+  color: silver;
 }
 
-#options>button:hover{
-  background-color: #803300;
+.menu:hover{
+color: grey;
 }
 
-.red{
-  background-color: #ff6666;
-}
-
-.green{
-  background-color: #33cc33;
-
-}
-
-@media (min-width: 760px){ 
-    #orders{
-      width: 55%;
-      height: auto;
-       z-index: 1;
-      position: absolute;
-      top:40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-}
-
-@media (max-width: 760px){ 
-    #orders{
-      
-       z-index: 1;
-      position: absolute;
-      top:10%;  
-    }
-}
 
